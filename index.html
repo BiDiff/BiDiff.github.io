@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVZFKZEW0F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QVZFKZEW0F');
+  </script>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Text-to-3D Generation with Bidirectional Diffusion using both 2D and 3D priors</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Text-to-3D Generation with Bidirectional Diffusion using both 2D and 3D priors</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                  <span class="author-block">
+                    <text >Anonymous</text>
+                  </span>
+            </div>
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/BiDiff/BiDiff.github.io" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img  src="static/images/teaser.png" alt="Teaser"/>
+      <h2 class="subtitle has-text-centered">
+        <span></span> Shap-E is suffering from Fake Texture in (a),
+        Zero-123 is suffering from inconsistent multi-views in (b), and Prolific Dreamer is suffering from Multi-face Janus problem in (c).
+      </h2>
+      <h2 class="subtitle has-text-centered">
+      <span class="dnerf"></span>
+        We propose BiDiff, which has Consistent Views, Reasonable Geometry, and Authentic Textures.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero ">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Most research in 3D object generation focuses on boosting 2D foundational models into the 3D space, either by minimizing 2D SDS loss or fine-tuning on multi-view datasets. Without explicit 3D priors, these methods often lead to geometric anomalies and multi-view inconsistency. Recently, researchers have attempted to improve the genuineness of 3D objects by training directly on 3D datasets, albeit at the cost of low-quality texture generation due to the limited 2D texture variation in 3D datasets. To harness the advantages of both approaches, in this paper, we propose Bidirectional Diffusion, a unified framework that incorporates both a 3D and a 2D diffusion process, to preserve both 3D fidelity and 2D texture richness, respetively. Both processes are built upon pre-trained foundation models, facilitating the efficient learning of the joint 3D and 2D distribution with robust 3D and 2D priors. Recognizing that a simple combination of two diffusion processes can yield inconsistent generation results, we further bridge them with innovative bidirectional guidance. Experimental results have shown that our model achieves high-quality, diverse, and scalable 3D generation. Code will be available.
+          </p>
+
+          <h2 class="title is-3">Decoupled geometry and texture control</h2>
+            
+          </p>
+          <img width="1450px" src="static/images/texture.png" alt="MY ALT TEXT"/>
+          <p>
+            (a) [Texture]: We change the texture while maintaining the overall shape。
+          </p>
+          <img width="1450px" src="static/images/shape.png" alt="MY ALT TEXT"/>
+          <p>
+            (b) [Geometry]: We fix texture patterns and generate various shapes
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methods: Bidirectional Diffusion</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/framework.png" alt="MY ALT TEXT"/>
+          <p>The framework of Bidirectional Diffusion. It jointly trains a 3D diffusion in SDF <span>&#x2112;</span> space and a 2D diffusion in multi-view image <span>&#x2115;</span> space, which are both enhanced by foundation models and interconnected by bidirectional guidance to achieve consistent denoising between two domains.</p>
+        </div>
+        <h2 class="title is-3">Qualitative experiment examples </h2>
+        <div class="content has-text-justified">
+          <img src="static/images/sample1.png" alt="MY ALT TEXT"/>
+          <p>
+            The top two lines are the results on the Shapenet-Chair, and the bottom three lines are the results on the Objaverse
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="columns is-centered has-text-centered">
+  <HR align=center style="border:3 double #000000" width="80%" SIZE=5>
+</div>
+
+
+<!-- Result -->
+<!-- <section class="section hero is-light"> -->
+<section class="hero section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <h2 class="title is-3">Compare with existing methods</h2>
+        <div class="content has-text-justified">
+          <p>
+            Comparison with other works. The text prompts are "a green dragon head" and "a cute lizard". We also use the stable diffusion to generate reference images for Zero-123.
+          </p>
+          <div style="text-align:center;">
+            <img src="static/images/compare.png" alt="MY ALT TEXT"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
