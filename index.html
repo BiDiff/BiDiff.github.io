@@ -86,7 +86,8 @@
   </div>
 </section>
 
-<section class="hero teaser">
+
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img  src="static/images/teaser2.png" alt="Teaser"/>
@@ -97,6 +98,20 @@
       <h2 class="subtitle has-text-centered">
       <span class="dnerf"></span>
         We propose BiDiff, which has Consistent Views, Reasonable Geometry, and Authentic Textures.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/bidiff_website_teaser1.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span></span> 
+        We propose BiDiff, which allows for simultaneous generation of multiple views and 3D results (40s), and rapid refinement of 3D results (20min).
       </h2>
     </div>
   </div>
@@ -151,6 +166,24 @@
   </div>
 </section>
 
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Abstract</h2>
+          <div class="item item-chair-tp">
+            <p align="center" width="100%">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/bidiff_website_teaser1.mp4" type="video/mp4">
+            </video>
+          </p>
+        </div>
+        <p>
+          Most 3D generation research focuses on up-projecting 2D foundation models into the 3D space, either by minimizing 2D Score Distillation Sampling (SDS) loss or fine-tuning on multi-view datasets. Without explicit 3D priors, these methods often lead to geometric anomalies and multi-view inconsistency. Recently, researchers have attempted to improve the genuineness of 3D objects by directly training on 3D datasets, albeit at the cost of low-quality texture generation due to the limited texture diversity in 3D datasets. To harness the advantages of both approaches, we propose Bidirectional Diffusion (BiDiff), a unified framework that incorporates both a 3D and a 2D diffusion process, to preserve both 3D fidelity and 2D texture richness, respectively. Moreover, as a simple combination may yield inconsistent generation results, we further bridge them with novel bidirectional guidance. In addition, our method can be used as an initialization of optimization-based models to further improve the quality of 3D model and efficiency of optimization, reducing the process from 3.4 hours to 20 minutes. Experimental results have shown that our model achieves high-quality, diverse, and scalable 3D generation.
+        </p>
+      </div>
+  </div>
+</section> -->
+
 <!-- Paper abstract -->
 <section class="section hero ">
   <div class="container is-max-desktop">
@@ -159,19 +192,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Most research in 3D object generation focuses on boosting 2D foundational models into the 3D space, either by minimizing 2D SDS loss or fine-tuning on multi-view datasets. Without explicit 3D priors, these methods often lead to geometric anomalies and multi-view inconsistency. Recently, researchers have attempted to improve the genuineness of 3D objects by training directly on 3D datasets, albeit at the cost of low-quality texture generation due to the limited 2D texture variation in 3D datasets. To harness the advantages of both approaches, in this paper, we propose Bidirectional Diffusion, a unified framework that incorporates both a 3D and a 2D diffusion process, to preserve both 3D fidelity and 2D texture richness, respetively. Both processes are built upon pre-trained foundation models, facilitating the efficient learning of the joint 3D and 2D distribution with robust 3D and 2D priors. Recognizing that a simple combination of two diffusion processes can yield inconsistent generation results, we further bridge them with innovative bidirectional guidance. Experimental results have shown that our model achieves high-quality, diverse, and scalable 3D generation. Code will be available.
+            Most 3D generation research focuses on up-projecting 2D foundation models into the 3D space, either by minimizing 2D Score Distillation Sampling (SDS) loss or fine-tuning on multi-view datasets. Without explicit 3D priors, these methods often lead to geometric anomalies and multi-view inconsistency. Recently, researchers have attempted to improve the genuineness of 3D objects by directly training on 3D datasets, albeit at the cost of low-quality texture generation due to the limited texture diversity in 3D datasets. To harness the advantages of both approaches, we propose Bidirectional Diffusion (BiDiff), a unified framework that incorporates both a 3D and a 2D diffusion process, to preserve both 3D fidelity and 2D texture richness, respectively. Moreover, as a simple combination may yield inconsistent generation results, we further bridge them with novel bidirectional guidance. In addition, our method can be used as an initialization of optimization-based models to further improve the quality of 3D model and efficiency of optimization, reducing the process from 3.4 hours to 20 minutes. Experimental results have shown that our model achieves high-quality, diverse, and scalable 3D generation.
           </p>
 
           <h2 class="title is-3">Decoupled geometry and texture control</h2>
             
           </p>
-          <img width="1450px" src="static/images/texture.png" alt="MY ALT TEXT"/>
-          <p>
+          <img width="1450px" src="static/images/texture_geometry.png" alt="MY ALT TEXT"/>
+          <!-- <p>
           (a) [Texture]: We change the texture while maintaining the overall shape。
           </p>
           <img width="1450px" src="static/images/shape.png" alt="MY ALT TEXT"/>
           <p>
             (b) [Geometry]: We fix texture patterns and generate various shapes
+          </p> -->
+          <h2 class="title is-3">Bidirectional Diffusion Sampling and Refinement</h2>
+          <p align="center" width="100%">
+            <video poster="" id="chair-tp" width="100%" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/more.mp4" type="video/mp4">
+            </video>
           </p>
         </div>
       </div>
@@ -179,11 +218,11 @@
   </div>
 </section>
 
-<section class="hero is-light is-small" style="background-color: white;">
+<!-- <section class="hero is-light is-small" style="background-color: white;">
   <div class="hero-body">
     <div class="container">
       <h2 class="subtitle has-text-centered">
-        <span></span> Results after optimization
+        <span></span> Bidirectional Diffusion Sampling and Refinement
       </h2>
       <div class="item item-chair-tp">
         <p align="center" width="100%">
@@ -194,7 +233,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="hero is-light is-small" >
   <div class="hero-body">
@@ -293,19 +332,19 @@
 <section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-six-fifths">
         <h2 class="title is-3">Methods: Bidirectional Diffusion</h2>
         <div class="content has-text-justified">
           <img src="static/images/framework.png" alt="MY ALT TEXT"/>
-          <p>The framework of Bidirectional Diffusion. It jointly trains a 3D diffusion in SDF <span>&#x2112;</span> space and a 2D diffusion in multi-view image <span>&#x2115;</span> space, which are both enhanced by foundation models and interconnected by bidirectional guidance to achieve consistent denoising between two domains.</p>
+          <p>The BiDiff framework operates as follows: (a) At each step of diffusion, we render the 3D diffusion's intermediate outputs into 2D images, which then guide the denoising of the 2D diffusion model. Simultaneously, the intermediate multi-view outputs from the 2D diffusion are re-projected to assist the denoising of the 3D diffusion model. Red arrows show the bidirectional guidance, which ensures that both diffusion processes evolve coherently. (b) We use the outcomes of the 2D-3D diffusion as a strong starting point for optimization methods, allowing for further refinement with fewer optimization steps.</p>
         </div>
-        <h2 class="title is-3">Qualitative experiment examples </h2>
+        <!-- <h2 class="title is-3">Qualitative experiment examples </h2>
         <div class="content has-text-justified">
           <img src="static/images/sample1.png" alt="MY ALT TEXT"/>
           <p>
             The top two lines are the results on the Shapenet-Chair, and the bottom three lines are the results on the Objaverse
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
