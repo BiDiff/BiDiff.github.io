@@ -30,7 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
   <title>Text-to-3D Generation with Bidirectional Diffusion using both 2D and 3D priors</title>
@@ -51,6 +51,9 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -200,7 +203,7 @@
 <section class="section hero ">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-six-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -209,14 +212,10 @@
 
           <p align="center" width="100%">
             <video poster="" id="chair-tp" width="100%" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/bidiff_website_teaser1.mp4" type="video/mp4">
+              <source src="./static/videos/bidiff_website_teaser2.mp4" type="video/mp4">
             </video>
           </p>
 
-          <h2 class="title is-3">Decoupled geometry and texture control</h2>
-            
-          </p>
-          <img width="1450px" src="static/images/texture_geometry.png" alt="MY ALT TEXT"/>
           <!-- <p>
           (a) [Texture]: We change the texture while maintaining the overall shape。
           </p>
@@ -242,6 +241,16 @@
   </div>
 </section>
 
+<section class="section hero ">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Decoupled geometry and texture control</h2>
+      </div>
+    </div>
+    <img width="1450px" src="static/images/texture_geometry.png" alt="MY ALT TEXT"/>
+  </div>
+</section>  
 
 <!-- End paper abstract -->
 
@@ -253,21 +262,29 @@
         <div class="content has-text-justified">
           <img src="static/images/bidiff_website_framework.png" alt="MY ALT TEXT"/>
           <p>The BiDiff framework operates as follows: (a) At each step of diffusion, we render the 3D diffusion's intermediate outputs into 2D images, which then guide the denoising of the 2D diffusion model. Simultaneously, the intermediate multi-view outputs from the 2D diffusion are re-projected to assist the denoising of the 3D diffusion model. Red arrows show the bidirectional guidance, which ensures that both diffusion processes evolve coherently. (b) We use the outcomes of the 2D-3D diffusion as a strong initialization for optimization methods, allowing for further refinement with fewer optimization steps.</p>
-          <h2 class="title is-3">(a) Sampling of 2D-3D diffusion (40s)</h2>
-          <p align="center" width="100%">
-            <video poster="" id="chair-tp" width="100%" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/bidiff_website_feedforward.mp4" type="video/mp4">
-            </video>
-          </p>
-          <h2 class="title is-3">(b) Refinement with strong initialization (20min)</h2>
-          <p align="center" width="100%">
-            <video poster="" id="chair-tp" width="100%" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/more.mp4" type="video/mp4">
-            </video>
-          </p>
         </div>
       </div>
     </div>
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Sampling of 2D-3D diffusion (40s)</h2>
+        <p align="center" width="100%">
+          <video poster="" id="chair-tp" width="100%" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bidiff_website_feedforward.mp4" type="video/mp4">
+          </video>
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Refinement with strong initialization (20min)</h2>
+        <p align="center" width="100%">
+          <video poster="" id="chair-tp" width="100%" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/more.mp4" type="video/mp4">
+          </video>
+        </p>
+      </div>
+    </div> -->
     <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Sampling of 2D-3D Diffusion (40s)</h2>
@@ -408,7 +425,7 @@
 
 <!-- Result -->
 <!-- <section class="section hero is-light"> -->
-<section class="hero section">
+<!-- <section class="hero section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-12">
@@ -422,10 +439,34 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End paper abstract -->
 
-
+<section class="hero section">
+  <div class="container is-max-desktop has-text-centered">
+    <p class="title is-3 mt-5 has-text-centered"> Exported Meshes </p>
+    <div class="level">
+      <div class="level-item">
+        <model-viewer src="/static/meshes/bear/model.obj" poster="" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="/static/meshes/fruit/model.obj" poster="" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="/static/meshes/gundam/model.obj" poster="" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="/static/meshes/lionfish/model.obj" poster="" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="/static/meshes/orangutan/model.obj" poster="" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+      <div class="level-item">
+        <model-viewer src="/static/meshes/pig2/model.obj" poster="" style="width: 100%; height: 300px;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer class="footer">
   <div class="container">
