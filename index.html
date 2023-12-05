@@ -44,6 +44,7 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -451,7 +452,36 @@
     <p class="title is-3 mt-5 has-text-centered"> Texture Meshes </p>
     <div class="columns">
       <div class="column">
-        <div class="level", style="width: 100%;">
+        <p align="center" width="100%">
+          <model-viewer src="static/meshes/bear.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        </p>
+      </div>
+      <div class="column">
+        <p align="center" width="100%">
+          <model-viewer src="static/meshes/fruit.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        </p>
+      </div>
+      <div class="column">
+        <p align="center" width="100%">
+          <model-viewer src="static/meshes/gundam.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        </p>
+      </div>
+      <div class="column">
+        <p align="center" width="100%">
+          <model-viewer src="static/meshes/lionfish.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        </p>
+      </div>
+      <div class="column">
+        <p align="center" width="100%">
+          <model-viewer src="static/meshes/orangutan.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        </p>
+      </div>
+      <div class="column">
+        <p align="center" width="100%">
+          <model-viewer src="static/meshes/pig2.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        </p>
+      </div>
+        <!-- <div class="level", style="width: 100%;">
           <div class="level-item">
             <model-viewer src="static/meshes/bear.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
           </div>
@@ -470,8 +500,8 @@
           <div class="level-item">
             <model-viewer src="static/meshes/pig2.glb" poster="" style="width: 100%;" auto-rotate shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
           </div>
-        </div>
-      </div>
+        </div> -->
+      
     </div>
 </section>
 
@@ -520,20 +550,25 @@
 
 
 <!-- citation -->
-<div class="card mt-4">
-  <header class="card-header">
-    <p class="card-header-title"> Citation </p>
-  </header>
-  <div class="card-content is-size-5 has-text-left">
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="card mt-4">
+        <header class="card-header">
+          <p class="card-header-title"> Citation </p>
+        </header>
+        <div class="card-content is-size-5 has-text-left">
 <pre><code>@article{ding2023bidiff,
 title={Text-to-3D Generation with Bidirectional Diffusion using both 2D and 3D priors},
 author={},
 journal={arXiv preprint arXiv:2309.XXXXX},
 year={2023}
 }</code></pre>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
+</section>
 
   <footer class="footer">
   <div class="container">
